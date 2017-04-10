@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udp_server", "udp_server\ud
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udp_client", "udp_client\udp_client.vcxproj", "{1C82C998-DEED-4761-8CC3-7B17B6F29640}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "multicast_sender", "multicast_sender\multicast_sender.vcxproj", "{0A79558E-17D9-4AA0-85D0-34C1DE0DA166}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "multicast_receiver", "multicast_receiver\multicast_receiver.vcxproj", "{9B2D1D3B-93C8-4832-95D6-E5DDA3E5C40E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +35,22 @@ Global
 		{1C82C998-DEED-4761-8CC3-7B17B6F29640}.Release|x64.Build.0 = Release|x64
 		{1C82C998-DEED-4761-8CC3-7B17B6F29640}.Release|x86.ActiveCfg = Release|Win32
 		{1C82C998-DEED-4761-8CC3-7B17B6F29640}.Release|x86.Build.0 = Release|Win32
+		{0A79558E-17D9-4AA0-85D0-34C1DE0DA166}.Debug|x64.ActiveCfg = Debug|x64
+		{0A79558E-17D9-4AA0-85D0-34C1DE0DA166}.Debug|x64.Build.0 = Debug|x64
+		{0A79558E-17D9-4AA0-85D0-34C1DE0DA166}.Debug|x86.ActiveCfg = Debug|Win32
+		{0A79558E-17D9-4AA0-85D0-34C1DE0DA166}.Debug|x86.Build.0 = Debug|Win32
+		{0A79558E-17D9-4AA0-85D0-34C1DE0DA166}.Release|x64.ActiveCfg = Release|x64
+		{0A79558E-17D9-4AA0-85D0-34C1DE0DA166}.Release|x64.Build.0 = Release|x64
+		{0A79558E-17D9-4AA0-85D0-34C1DE0DA166}.Release|x86.ActiveCfg = Release|Win32
+		{0A79558E-17D9-4AA0-85D0-34C1DE0DA166}.Release|x86.Build.0 = Release|Win32
+		{9B2D1D3B-93C8-4832-95D6-E5DDA3E5C40E}.Debug|x64.ActiveCfg = Debug|x64
+		{9B2D1D3B-93C8-4832-95D6-E5DDA3E5C40E}.Debug|x64.Build.0 = Debug|x64
+		{9B2D1D3B-93C8-4832-95D6-E5DDA3E5C40E}.Debug|x86.ActiveCfg = Debug|Win32
+		{9B2D1D3B-93C8-4832-95D6-E5DDA3E5C40E}.Debug|x86.Build.0 = Debug|Win32
+		{9B2D1D3B-93C8-4832-95D6-E5DDA3E5C40E}.Release|x64.ActiveCfg = Release|x64
+		{9B2D1D3B-93C8-4832-95D6-E5DDA3E5C40E}.Release|x64.Build.0 = Release|x64
+		{9B2D1D3B-93C8-4832-95D6-E5DDA3E5C40E}.Release|x86.ActiveCfg = Release|Win32
+		{9B2D1D3B-93C8-4832-95D6-E5DDA3E5C40E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

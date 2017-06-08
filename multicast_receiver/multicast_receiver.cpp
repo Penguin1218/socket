@@ -4,7 +4,7 @@
 #include <WinSock2.h>
 #include <WS2tcpip.h>
 
-#define BUF_SIZE 30
+#define BUF_SIZE 65535
 void ErrorHandling(char* message);
 
 int main(int argc, char* argv[])
@@ -31,6 +31,9 @@ int main(int argc, char* argv[])
 	if (setsockopt(hRecvSock, IPPROTO_IP, IP_ADD_MEMBERSHIP, (const char*)&joinAddr, sizeof(joinAddr)) == SOCKET_ERROR)
 		ErrorHandling("setsockopt() IP_ADD_MEMBERSHIP error");
 
+	BOOL flag_multi_bind = TRUE;
+	if (setsockopt(hRecvSock, SOL_SOCKET, SO_REUSEADDR, (const char*)&flag_multi_bind, sizeof(flag_multi_bind)) == SOCKET_ERROR)
+		ErrorHandling("setsockopt() SO_REUSEADDR error");
 
 	memset(&addr, 0, sizeof(addr));
 	addr.sin_family = AF_INET;
@@ -39,9 +42,6 @@ int main(int argc, char* argv[])
 	if (bind(hRecvSock, (SOCKADDR*)&addr, sizeof(addr)) == SOCKET_ERROR)
 		ErrorHandling("bind() error");
 
-	BOOL flag_multi_bind = TRUE;
-	if (setsockopt(hRecvSock, SOL_SOCKET, SO_REUSEADDR, (const char*)&flag_multi_bind, sizeof(flag_multi_bind)) == SOCKET_ERROR)
-		ErrorHandling("setsockopt() SO_REUSEADDR error");
 
 	while (1)
 	{

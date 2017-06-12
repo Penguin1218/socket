@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 {
 	WSADATA wsaData;
 	SOCKET hSendSock;
-	SOCKADDR_IN mulAddr;
+	SOCKADDR_IN mulAddr;  
 	int timeLive = TTL;
 	FILE* fp;
 	char buf[BUF_SIZE] = { 0, };
